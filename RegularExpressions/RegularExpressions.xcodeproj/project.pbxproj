@@ -16,7 +16,6 @@
 		CE9E6A601C5EF0CB002F1BE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE9E6A5E1C5EF0CB002F1BE4 /* LaunchScreen.storyboard */; };
 		CE9E6A6B1C5EF0CC002F1BE4 /* RegularExpressionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E6A6A1C5EF0CC002F1BE4 /* RegularExpressionsTests.m */; };
 		CE9E6A761C5EF0CC002F1BE4 /* RegularExpressionsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E6A751C5EF0CC002F1BE4 /* RegularExpressionsUITests.m */; };
-		CE9E6A861C5EF132002F1BE4 /* NSString+RegularExpressions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E6A851C5EF132002F1BE4 /* NSString+RegularExpressions.m */; };
 		CE9E6A8F1C5EF453002F1BE4 /* XWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E6A8D1C5EF453002F1BE4 /* XWTableViewCell.m */; };
 		CE9E6A901C5EF453002F1BE4 /* XWTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9E6A8E1C5EF453002F1BE4 /* XWTableViewCell.xib */; };
 		CE9E6A941C5EF598002F1BE4 /* XWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E6A921C5EF598002F1BE4 /* XWViewController.m */; };
@@ -58,8 +57,6 @@
 		CE9E6A711C5EF0CC002F1BE4 /* RegularExpressionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegularExpressionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E6A751C5EF0CC002F1BE4 /* RegularExpressionsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegularExpressionsUITests.m; sourceTree = "<group>"; };
 		CE9E6A771C5EF0CC002F1BE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE9E6A841C5EF132002F1BE4 /* NSString+RegularExpressions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RegularExpressions.h"; sourceTree = "<group>"; };
-		CE9E6A851C5EF132002F1BE4 /* NSString+RegularExpressions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegularExpressions.m"; sourceTree = "<group>"; };
 		CE9E6A8C1C5EF453002F1BE4 /* XWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWTableViewCell.h; sourceTree = "<group>"; };
 		CE9E6A8D1C5EF453002F1BE4 /* XWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWTableViewCell.m; sourceTree = "<group>"; };
 		CE9E6A8E1C5EF453002F1BE4 /* XWTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XWTableViewCell.xib; sourceTree = "<group>"; };
@@ -157,8 +154,6 @@
 		CE9E6A871C5EF3D9002F1BE4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				CE9E6A841C5EF132002F1BE4 /* NSString+RegularExpressions.h */,
-				CE9E6A851C5EF132002F1BE4 /* NSString+RegularExpressions.m */,
 				CE318A2F1C5F2D4D00952A3A /* XWRegularExpression.h */,
 				CE318A301C5F2D4D00952A3A /* XWRegularExpression.m */,
 			);
@@ -335,7 +330,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9E6A861C5EF132002F1BE4 /* NSString+RegularExpressions.m in Sources */,
 				CE9E6A8F1C5EF453002F1BE4 /* XWTableViewCell.m in Sources */,
 				CE9E6A581C5EF0CB002F1BE4 /* ViewController.m in Sources */,
 				CE318A311C5F2D4D00952A3A /* XWRegularExpression.m in Sources */,

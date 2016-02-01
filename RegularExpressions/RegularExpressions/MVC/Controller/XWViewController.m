@@ -7,7 +7,6 @@
 //
 
 #import "XWViewController.h"
-#import "NSString+RegularExpressions.h"
 #import "XWRegularExpression.h"
 // 随机色
 // RGB颜色
@@ -116,17 +115,16 @@
 }
 
 -(void)judgeTextFieldResultType:(NSString *)inputText{
-    XWRegularExpression *expression = [[XWRegularExpression alloc]init];
     switch (self.type) {
         case RegularExpressionTypePhone:
-            if ([expression isPhoneNumber:inputText]) {
+            if ([XWRegularExpression isPhoneNumber:inputText]) {
                 self.resultLabel.text = @"输入的是电话号码";
             }else{
                 self.resultLabel.text = @"输入的电话号码格式错误";
             }
             break;
         case RegularExpressionTypeEmail:
-            if ([expression detectionIsEmailQualified:inputText]) {
+            if ([XWRegularExpression detectionIsEmailQualified:inputText]) {
                 self.resultLabel.text = @"输入的是正确的邮箱地址";
             }else{
                 self.resultLabel.text = @"输入的邮箱地址格式错误";
@@ -134,7 +132,7 @@
             
             break;
         case RegularExpressionTypeuserPsswordVc:
-            if ([expression detectionIsPasswordQualified:inputText]) {
+            if ([XWRegularExpression detectionIsPasswordQualified:inputText]) {
                 self.resultLabel.text = @"输入密码格式正确，是以字母开头，包含数字，特殊字符以字母结尾";
             }else{
                 self.resultLabel.text = @"输入的密码格式错误";
@@ -142,14 +140,14 @@
             
             break;
         case RegularExpressionTypeIDCardVc:
-            if ([expression detectionIsIdCardNumberQualified:inputText]) {
+            if ([XWRegularExpression detectionIsIdCardNumberQualified:inputText]) {
                 self.resultLabel.text = @"输入的身份证号码格式正确";
             }else{
                 self.resultLabel.text = @"输入的身份证号码格式错误";
             }
             break;
         case RegularExpressionTypeAllNumber:
-            if ([expression detectionIsAllNumber:inputText]) {
+            if ([XWRegularExpression detectionIsAllNumber:inputText]) {
                 self.resultLabel.text = @"输入的是全为数字";
             }else{
                 self.resultLabel.text = @"输入的数字格式错误";
@@ -157,7 +155,7 @@
             
             break;
         case RegularExpressionTypeUrl:
-            if ([expression detectionIsUrl:inputText]) {
+            if ([XWRegularExpression detectionIsUrl:inputText]) {
                 self.resultLabel.text = @"输入的URL地址正确";
             }else{
                 self.resultLabel.text = @"输入的url地址格式错误";
@@ -165,14 +163,14 @@
             
             break;
         case RegularExpressionTypeIPAddress:
-            if ([expression detectionIsIPAddress:inputText]) {
+            if ([XWRegularExpression detectionIsIPAddress:inputText]) {
                 self.resultLabel.text = @"输入的IP地址正确";
             }else{
                 self.resultLabel.text = @"输入的IP地址格式错误";
             }
             break;
         case RegularExpressionTypeChinese:
-            if ([expression detectionIsChinese:inputText]) {
+            if ([XWRegularExpression detectionIsChinese:inputText]) {
                 self.resultLabel.text = @"输入的是汉字";
             }else{
                 self.resultLabel.text = @"输入的不是汉字";
@@ -180,7 +178,7 @@
             break;
         default:
         case RegularExpressionTypeEnglishAlphabetVc:
-            if ([expression detectionIsEnglishAlphabet:inputText]) {
+            if ([XWRegularExpression detectionIsEnglishAlphabet:inputText]) {
                 self.resultLabel.text = @"输入的是全为26个字母组成的字符串";
             }else{
                 self.resultLabel.text = @"输入的字母字符串格式错误";
