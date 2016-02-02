@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CE318A311C5F2D4D00952A3A /* XWRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = CE318A301C5F2D4D00952A3A /* XWRegularExpression.m */; };
+		CE318A341C5F45B500952A3A /* XWTextHightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE318A331C5F45B500952A3A /* XWTextHightViewController.m */; };
+		CE318A391C5F62E000952A3A /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = CE318A381C5F62E000952A3A /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CE318A3C1C5F633400952A3A /* XWTextPart.m in Sources */ = {isa = PBXBuildFile; fileRef = CE318A3B1C5F633400952A3A /* XWTextPart.m */; };
+		CE318C401C6105F100952A3A /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE318C3F1C6105F100952A3A /* libicucore.tbd */; };
 		CE9E6A521C5EF0CB002F1BE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E6A511C5EF0CB002F1BE4 /* main.m */; };
 		CE9E6A551C5EF0CB002F1BE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E6A541C5EF0CB002F1BE4 /* AppDelegate.m */; };
 		CE9E6A581C5EF0CB002F1BE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9E6A571C5EF0CB002F1BE4 /* ViewController.m */; };
@@ -41,6 +45,14 @@
 /* Begin PBXFileReference section */
 		CE318A2F1C5F2D4D00952A3A /* XWRegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWRegularExpression.h; sourceTree = "<group>"; };
 		CE318A301C5F2D4D00952A3A /* XWRegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWRegularExpression.m; sourceTree = "<group>"; };
+		CE318A321C5F45B500952A3A /* XWTextHightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWTextHightViewController.h; sourceTree = "<group>"; };
+		CE318A331C5F45B500952A3A /* XWTextHightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWTextHightViewController.m; sourceTree = "<group>"; };
+		CE318A361C5F4F5E00952A3A /* RegularExpression_PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpression_PrefixHeader.pch; sourceTree = "<group>"; };
+		CE318A371C5F62E000952A3A /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		CE318A381C5F62E000952A3A /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		CE318A3A1C5F633400952A3A /* XWTextPart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWTextPart.h; sourceTree = "<group>"; };
+		CE318A3B1C5F633400952A3A /* XWTextPart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWTextPart.m; sourceTree = "<group>"; };
+		CE318C3F1C6105F100952A3A /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		CE9E6A4D1C5EF0CB002F1BE4 /* RegularExpressions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegularExpressions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9E6A511C5EF0CB002F1BE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE9E6A531C5EF0CB002F1BE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE318C401C6105F100952A3A /* libicucore.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +105,7 @@
 		CE9E6A441C5EF0CB002F1BE4 = {
 			isa = PBXGroup;
 			children = (
+				CE318C3F1C6105F100952A3A /* libicucore.tbd */,
 				CE9E6A4F1C5EF0CB002F1BE4 /* RegularExpressions */,
 				CE9E6A691C5EF0CC002F1BE4 /* RegularExpressionsTests */,
 				CE9E6A741C5EF0CC002F1BE4 /* RegularExpressionsUITests */,
@@ -129,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9E6A511C5EF0CB002F1BE4 /* main.m */,
+				CE318A361C5F4F5E00952A3A /* RegularExpression_PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,6 +169,8 @@
 		CE9E6A871C5EF3D9002F1BE4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				CE318A371C5F62E000952A3A /* RegexKitLite.h */,
+				CE318A381C5F62E000952A3A /* RegexKitLite.m */,
 				CE318A2F1C5F2D4D00952A3A /* XWRegularExpression.h */,
 				CE318A301C5F2D4D00952A3A /* XWRegularExpression.m */,
 			);
@@ -177,6 +194,8 @@
 				CE9E6A571C5EF0CB002F1BE4 /* ViewController.m */,
 				CE9E6A911C5EF598002F1BE4 /* XWViewController.h */,
 				CE9E6A921C5EF598002F1BE4 /* XWViewController.m */,
+				CE318A321C5F45B500952A3A /* XWTextHightViewController.h */,
+				CE318A331C5F45B500952A3A /* XWTextHightViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +203,8 @@
 		CE9E6A8A1C5EF41F002F1BE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CE318A3A1C5F633400952A3A /* XWTextPart.h */,
+				CE318A3B1C5F633400952A3A /* XWTextPart.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,8 +352,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9E6A8F1C5EF453002F1BE4 /* XWTableViewCell.m in Sources */,
+				CE318A341C5F45B500952A3A /* XWTextHightViewController.m in Sources */,
+				CE318A391C5F62E000952A3A /* RegexKitLite.m in Sources */,
 				CE9E6A581C5EF0CB002F1BE4 /* ViewController.m in Sources */,
 				CE318A311C5F2D4D00952A3A /* XWRegularExpression.m in Sources */,
+				CE318A3C1C5F633400952A3A /* XWTextPart.m in Sources */,
 				CE9E6A551C5EF0CB002F1BE4 /* AppDelegate.m in Sources */,
 				CE9E6A941C5EF598002F1BE4 /* XWViewController.m in Sources */,
 				CE9E6A521C5EF0CB002F1BE4 /* main.m in Sources */,
@@ -474,11 +498,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/WeiXiang/Desktop/RegularExpressionOne/RegularExpressions/RegularExpressions/RegularExpression_PrefixHeader.pch;
 				INFOPLIST_FILE = RegularExpressions/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Edwin.hxl.RegularExpressions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Debug;
 		};
@@ -486,11 +512,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/WeiXiang/Desktop/RegularExpressionOne/RegularExpressions/RegularExpressions/RegularExpression_PrefixHeader.pch;
 				INFOPLIST_FILE = RegularExpressions/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Edwin.hxl.RegularExpressions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 			};
 			name = Release;
 		};

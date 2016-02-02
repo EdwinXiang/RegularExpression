@@ -39,12 +39,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="759" y="9.75"/>
+            <point key="canvasLocation" x="544" y="-28"/>
         </scene>
-        <!--View Controller-->
+        <!--文字高亮-->
         <scene sceneID="fdI-rV-ViO">
             <objects>
-                <viewController id="fmn-w7-rQ2" customClass="XWViewController" sceneMemberID="viewController">
+                <viewController id="fmn-w7-rQ2" customClass="XWTextHightViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R7A-Fi-VOa"/>
                         <viewControllerLayoutGuide type="bottom" id="V26-wK-EK8"/>
@@ -104,6 +104,34 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8c-4p-LR8">
+                                <rect key="frame" x="223" y="126" width="46" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.46511657159999997" blue="0.97031904150000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T1v-RA-1ok">
+                                <rect key="frame" x="236" y="262" width="97" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="daB-tc-dq0">
+                                <rect key="frame" x="367" y="196" width="121" height="29"/>
+                                <animations/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ze3-fj-b57">
+                                <rect key="frame" x="146" y="355" width="118" height="31"/>
+                                <animations/>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rDf-PR-hIN">
+                                <rect key="frame" x="433" y="397" width="51" height="31"/>
+                                <animations/>
+                            </switch>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,11 +152,11 @@
                                 <exclude reference="HjA-qu-AlD"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="1bd-DB-5rY"/>
-                                <exclude reference="8KP-X3-8Zm"/>
                                 <exclude reference="Pyn-bP-X51"/>
                                 <exclude reference="Swf-I3-83d"/>
                                 <exclude reference="bZY-fc-3lj"/>
+                                <exclude reference="1bd-DB-5rY"/>
+                                <exclude reference="8KP-X3-8Zm"/>
                                 <exclude reference="6a3-02-Mo9"/>
                                 <exclude reference="L3c-Rn-izJ"/>
                                 <exclude reference="u89-gb-HgA"/>
@@ -141,17 +169,18 @@
                                 <include reference="HjA-qu-AlD"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="1bd-DB-5rY"/>
-                                <include reference="8KP-X3-8Zm"/>
                                 <include reference="Pyn-bP-X51"/>
                                 <include reference="Swf-I3-83d"/>
                                 <include reference="bZY-fc-3lj"/>
+                                <include reference="1bd-DB-5rY"/>
+                                <include reference="8KP-X3-8Zm"/>
                                 <include reference="6a3-02-Mo9"/>
                                 <include reference="L3c-Rn-izJ"/>
                                 <include reference="u89-gb-HgA"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="文字高亮" id="8tF-I5-u4D"/>
                     <connections>
                         <outlet property="resultLabel" destination="eJ4-ku-KaM" id="9Kb-g4-4KN"/>
                         <outlet property="textField" destination="w6W-Rs-CBA" id="TBT-lZ-Pbh"/>
@@ -160,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yN7-HD-FIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1419" y="9.75"/>
+            <point key="canvasLocation" x="1337" y="-28"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ktS-NR-2rg">
@@ -179,7 +208,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0S-nv-EAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="9.75"/>
+            <point key="canvasLocation" x="-320" y="-22"/>
         </scene>
     </scenes>
 </document>

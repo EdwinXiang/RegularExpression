@@ -7,11 +7,8 @@
 //
 
 #import "XWViewController.h"
-#import "XWRegularExpression.h"
 // 随机色
-// RGB颜色
-#define HWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define XWRandomColor HWColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
 @interface XWViewController ()<UITextFieldDelegate>
 /**
  *  判断类型
@@ -81,6 +78,8 @@
     self.resultLabel.center = self.view.center;
     self.resultLabel.backgroundColor = [UIColor whiteColor];
     self.resultLabel.numberOfLines = 0;
+    self.resultLabel.layer.cornerRadius = 5;
+    self.resultLabel.layer.masksToBounds = YES;
     self.resultLabel.adjustsFontSizeToFitWidth = YES;
     self.resultLabel.textAlignment = NSTextAlignmentLeft;
     self.resultLabel.font = [UIFont systemFontOfSize:14.0];
@@ -91,6 +90,8 @@
     labelCenter.x = 100;
     labelCenter.y = self.view.center.y-50;
     self.titleLabel.center = labelCenter;
+    self.titleLabel.layer.cornerRadius = 5;
+    self.titleLabel.layer.masksToBounds = YES;
     self.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.titleLabel.backgroundColor = [UIColor whiteColor];
     self.titleLabel.numberOfLines = 0;

@@ -79,4 +79,12 @@
  *  @return 返回检测结果 是或者不是
  */
 +(BOOL)detectionIsChinese:(NSString *)patternStr;
+
+/**
+ *  验证输入的是否是URL地址
+ *  @param pattern 传入需要检测的字符串
+ *
+ *  @return 返回检测结果 是或者不是
+ */
++(BOOL)detectionNormalText:(NSString *)normalStr WithHighLightText:(NSString *)HighLightStr;
 @end

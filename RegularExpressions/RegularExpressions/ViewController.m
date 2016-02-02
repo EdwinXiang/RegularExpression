@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "XWTableViewCell.h"
-#import "XWViewController.h"
+
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -21,7 +20,7 @@
 @implementation ViewController
 -(NSMutableArray *)dataArr{
     if (!_dataArr) {
-        _dataArr = [[NSMutableArray alloc]initWithObjects:@"电话号码",@"邮箱",@"网页地址",@"全数字",@"身份证号码",@"全英文字符",@"IP地址",@"用户密码",@"汉字", nil];
+        _dataArr = [[NSMutableArray alloc]initWithObjects:@"电话号码",@"邮箱",@"网页地址",@"全数字",@"身份证号码",@"全英文字符",@"IP地址",@"用户密码",@"汉字",@"文字高亮显示", nil];
     }
     return _dataArr;
 }
@@ -49,40 +48,54 @@
 }
 #pragma mark --UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+        XWViewController *regularVc = [[XWViewController alloc]init];
+    XWTextHightViewController *textVc = [[XWTextHightViewController alloc]init];
+        switch (indexPath.row) {
+            case 0:
+                regularVc.type = RegularExpressionTypePhone;
+                [self.navigationController pushViewController:regularVc animated:YES];
+                break;
+            case 1:
+                regularVc.type = RegularExpressionTypeEmail;
+                [self.navigationController pushViewController:regularVc animated:YES];
+                break;
+            case 2:
+                regularVc.type = RegularExpressionTypeUrl;
+                [self.navigationController pushViewController:regularVc animated:YES];
+                break;
+            case 3:
+                regularVc.type = RegularExpressionTypeAllNumber;
+                [self.navigationController pushViewController:regularVc animated:YES];
+                break;
+            case 4:
+                regularVc.type = RegularExpressionTypeIDCardVc;
+                [self.navigationController pushViewController:regularVc animated:YES];
+                break;
+            case 5:
+                regularVc.type = RegularExpressionTypeEnglishAlphabetVc;
+                [self.navigationController pushViewController:regularVc animated:YES];
+                break;
+            case 6:
+                regularVc.type = RegularExpressionTypeIPAddress;
+                [self.navigationController pushViewController:regularVc animated:YES];
+                break;
+            case 7:
+                regularVc.type = RegularExpressionTypeuserPsswordVc;
+                [self.navigationController pushViewController:regularVc animated:YES];
+                break;
+            case 8:
+                regularVc.type = RegularExpressionTypeChinese;
+                [self.navigationController pushViewController:regularVc animated:YES];
+                break;
+                
+            default:
+                [self.navigationController pushViewController:textVc animated:YES];
+                break;
+                
+        }
     
-    XWViewController *regularVc = [[XWViewController alloc]init];
-    switch (indexPath.row) {
-        case 0:
-            regularVc.type = RegularExpressionTypePhone;
-            break;
-        case 1:
-            regularVc.type = RegularExpressionTypeEmail;
-            break;
-        case 2:
-            regularVc.type = RegularExpressionTypeUrl;
-            break;
-        case 3:
-            regularVc.type = RegularExpressionTypeAllNumber;
-            break;
-        case 4:
-            regularVc.type = RegularExpressionTypeIDCardVc;
-            break;
-        case 5:
-            regularVc.type = RegularExpressionTypeEnglishAlphabetVc;
-            break;
-        case 6:
-            regularVc.type = RegularExpressionTypeIPAddress;
-            break;
-        case 7:
-            regularVc.type = RegularExpressionTypeuserPsswordVc;
-            break;
-        default:
-            regularVc.type = RegularExpressionTypeChinese;
-            break;
-    }
-    [self.navigationController pushViewController:regularVc animated:YES];
-    
-    
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -1,0 +1,31 @@
+//
+//  RegularExpression_PrefixHeader.pch
+//  RegularExpressions
+//
+//  Created by Edwin on 16/2/1.
+//  Copyright © 2016年 EdwinXiang. All rights reserved.
+//
+
+#ifndef RegularExpression_PrefixHeader_pch
+#define RegularExpression_PrefixHeader_pch
+
+//屏幕宽度
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width
+
+//屏幕高度
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+
+// RGB颜色
+#define HWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define XWRandomColor HWColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#import "XWTableViewCell.h"
+#import "XWViewController.h"
+#import "XWTextHightViewController.h"
+#import "XWRegularExpression.h"
+#import "RegexKitLite.h"
+#import "XWTextPart.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* RegularExpression_PrefixHeader_pch */
